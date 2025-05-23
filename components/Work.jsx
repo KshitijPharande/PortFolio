@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 
 const Work = ({ isDarkMode }) => {
-    const [visibleProjects, setVisibleProjects] = useState(4); // Initially show 4 projects
+    const [visibleProjects, setVisibleProjects] = useState(3); // Initially show 3 projects
     const [showMore, setShowMore] = useState(false); // State to toggle Show More/Show Less
 
     // Function to handle "Show More" / "Show Less" click
@@ -13,7 +13,7 @@ const Work = ({ isDarkMode }) => {
         if (!showMore) {
             setVisibleProjects(workData.length); // Show all projects
         } else {
-            setVisibleProjects(4); // Show only the first 4 projects
+            setVisibleProjects(3); // Show only the first 3 projects
         }
     };
 
@@ -81,22 +81,24 @@ const Work = ({ isDarkMode }) => {
                 ))}
             </motion.div>
 
-            <motion.a
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 1.1, duration: 0.5 }}
-                onClick={toggleShowProjects}
-                className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover cursor-pointer'>
-                {showMore ? 'Show Less' : 'Show More'}
-                <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='Right arrow' className='w-4' />
-            </motion.a>
+            {workData.length > 3 && (
+                <motion.a
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 1.1, duration: 0.5 }}
+                    onClick={toggleShowProjects}
+                    className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover cursor-pointer'>
+                    {showMore ? 'Show Less' : 'Show More'}
+                    <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='Right arrow' className='w-4' />
+                </motion.a>
+            )}
 
             {/* Smooth animation for the remaining projects */}
             {showMore && (
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}  // Start with opacity 0 and y position 20px below
-                    animate={{ opacity: 1, y: 0 }}   // Animate to full opacity and y position 0
-                    transition={{ duration: 0.6 }}   // Smooth transition duration
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
                     className='grid grid-cols-auto gap-5'>
                     {workData.slice(visibleProjects).map((project, index) => (
                         <a

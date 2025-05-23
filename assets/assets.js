@@ -36,6 +36,7 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import pinkcode from './pinkcode.png'
+import firebasee from './firebasee.png'
 
 
 
@@ -49,6 +50,7 @@ export const assets = {
     project_icon_dark,
     vscode,
     firebase,
+    firebasee,
     figma,
     git,
     mongodb,
@@ -94,10 +96,10 @@ export const workData = [
         link: 'https://www.zyberweave.com/'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-        link: 'https://www.zyberweave.com/'
+        title: 'Smart Gains',
+        description: 'Professional Company Website',
+        bgImage: '/work-3.png',
+        link: 'https://www.smartgains.co.in/'
     },
     {
         title: 'Geo based app',
@@ -171,6 +173,7 @@ export const infoList = [
 export const toolsData = [
     { image: assets.vscode, name: "VS Code" },
     { image: assets.firebase, name: "Postman" },
+    { image: assets.firebasee, name: "Firebase" },
     { image: assets.mongodb, name: "MongoDB" },
     { image: assets.figma, name: "Figma" },
     { image: assets.git, name: "Git" },
