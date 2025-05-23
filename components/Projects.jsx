@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 
 const Projects = ({ isDarkMode }) => {
-    const [visibleProjects, setVisibleProjects] = useState(3); // Initially show 3 projects
+    const [visibleProjects, setVisibleProjects] = useState(4); // Initially show 4 projects
     const [showMore, setShowMore] = useState(false); // State to toggle Show More/Show Less
 
     // Function to handle "Show More" / "Show Less" click
@@ -13,7 +13,7 @@ const Projects = ({ isDarkMode }) => {
         if (!showMore) {
             setVisibleProjects(personalProjectData.length); // Show all projects
         } else {
-            setVisibleProjects(3); // Show only the first 3 projects
+            setVisibleProjects(4); // Show only the first 4 projects
         }
     };
 
@@ -68,9 +68,17 @@ const Projects = ({ isDarkMode }) => {
                             style={{ backgroundImage: `url(${project.bgImage})` }}
                         >
                             <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>
-                                <div>
-                                    <h2 className='font-semibold'>{project.title}</h2>
-                                    <p className='text-sm text-gray-700'>{project.description}</p>
+                                <div className='flex-1'>
+                                    {/* Title and Description (visible by default, hidden on hover) */}
+                                    <div className='group-hover:hidden'>
+                                        <h2 className='font-semibold'>{project.title}</h2>
+                                        <p className='text-sm text-gray-700'>{project.description}</p>
+                                    </div>
+                                    {/* TechStack (hidden by default, visible on hover) */}
+                                    <div className='hidden group-hover:block'>
+                                        <h2 className='font-semibold'>Tech Stack</h2>
+                                        <p className='text-sm text-gray-700'>{project.TechStack}</p>
+                                    </div>
                                 </div>
                                 <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
                                     <Image src={assets.send_icon} alt='send icon' className='w-5' />
@@ -94,9 +102,9 @@ const Projects = ({ isDarkMode }) => {
             {/* Smooth animation for the remaining projects */}
             {showMore && (
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}  // Start with opacity 0 and y position 20px below
-                    animate={{ opacity: 1, y: 0 }}   // Animate to full opacity and y position 0
-                    transition={{ duration: 0.6 }}   // Smooth transition duration
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
                     className='grid grid-cols-auto gap-10'>
                     {personalProjectData.slice(visibleProjects).map((project, index) => (
                         <a
@@ -113,9 +121,17 @@ const Projects = ({ isDarkMode }) => {
                                 style={{ backgroundImage: `url(${project.bgImage})` }}
                             >
                                 <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>
-                                    <div>
-                                        <h2 className='font-semibold'>{project.title}</h2>
-                                        <p className='text-sm text-gray-700'>{project.description}</p>
+                                    <div className='flex-1'>
+                                        {/* Title and Description (visible by default, hidden on hover) */}
+                                        <div className='group-hover:hidden'>
+                                            <h2 className='font-semibold'>{project.title}</h2>
+                                            <p className='text-sm text-gray-700'>{project.description}</p>
+                                        </div>
+                                        {/* TechStack (hidden by default, visible on hover) */}
+                                        <div className='hidden group-hover:block'>
+                                            <h2 className='font-semibold'>Tech Stack</h2>
+                                            <p className='text-sm text-gray-700'>{project.TechStack}</p>
+                                        </div>
                                     </div>
                                     <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
                                         <Image src={assets.send_icon} alt='send icon' className='w-5' />

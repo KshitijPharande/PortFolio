@@ -35,6 +35,9 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import pinkcode from './pinkcode.png'
+
+
 
 export const assets = {
     user_image,
@@ -73,7 +76,8 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    pinkcode
 };
 
 export const workData = [
@@ -107,39 +111,66 @@ export const personalProjectData = [
     {
         title: 'GreenKart',
         description: 'An online grocery shopping platform with seamless user experience.',
+        TechStack: 'Next.js, Node.js, MongoDB, Tailwind CSS, Stripe, JWT',
         bgImage: '/personal-1.png',
         link: 'https://green-kart-frontend.vercel.app/'
     },
     {
         title: 'Blogging Platform',
         description: 'A dynamic content publishing website for writers and readers.',
+        TechStack: 'Next.js, Node.js, MongoDB, Tailwind CSS, JWT',
         bgImage: '/personal-2.png',
         link: 'https://blogging-website-vercel.vercel.app/'
     },
     {
         title: 'Gemini Clone',
         description: 'An AI-powered chat assistant inspired by Google Gemini.',
+        TechStack: 'Next.js, Node.js, MongoDB, Tailwind CSS, AI API, JWT',
         bgImage: '/personal-3.png',
         link: 'https://gemini-clone-blue-eight.vercel.app/'
+    },
+    {
+        title: 'Healsync',
+        description: 'A Full stack Site for Hospital Management.',
+        TechStack: 'Next.js, Node.js, MongoDB, Tailwind CSS, JWT',
+        bgImage: '/personal-4.png',
+        link: 'https://heal-sync-rosy.vercel.app/'
     },
 ];
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    {
+        icon: assets.web_icon,
+        title: 'Web Development',
+        description: 'Building responsive, high-performance web applications using modern frameworks like Next.js and Node.js.',
+    },
+    {
+        icon: assets.ui_icon,
+        title: 'UI/UX Design',
+        description: 'Designing clean and intuitive user interfaces focused on seamless user experiences using tools like Figma.',
+    },
+    {
+        icon: assets.graphics_icon,
+        title: 'Graphic Design',
+        description: 'Creating eye-catching visuals and brand assets that enhance digital presence and engagement.',
+    },
+    {
+        icon: assets.pinkcode,
+        title: 'API Development',
+        description: 'Developing secure and scalable RESTful APIs to support dynamic and data-driven applications.',
+    },
 ];
 
+
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Tech Stack', description: 'React Js/Next Js, MongoDB, Node.js, Express.js, HTML, CSS, TailWind CSS, JavaScript, TypeScript ' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Electronics and Telecommunication. Certification-Certified Ethical Hacker by EC-Council' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Scroll to see list of my projects' }
 ];
 
 export const toolsData = [
     { image: assets.vscode, name: "VS Code" },
-    { image: assets.firebase, name: "Firebase" },
+    { image: assets.firebase, name: "Postman" },
     { image: assets.mongodb, name: "MongoDB" },
     { image: assets.figma, name: "Figma" },
     { image: assets.git, name: "Git" },
