@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 
 const Work = ({ isDarkMode }) => {
-    const [visibleProjects, setVisibleProjects] = useState(3); // Initially show 3 projects
+    const [visibleProjects, setVisibleProjects] = useState(4); // Initially show 3 projects
     const [showMore, setShowMore] = useState(false); // State to toggle Show More/Show Less
 
     // Function to handle "Show More" / "Show Less" click
@@ -13,7 +13,7 @@ const Work = ({ isDarkMode }) => {
         if (!showMore) {
             setVisibleProjects(workData.length); // Show all projects
         } else {
-            setVisibleProjects(3); // Show only the first 3 projects
+            setVisibleProjects(4); // Show only the first 3 projects
         }
     };
 

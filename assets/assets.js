@@ -84,6 +84,13 @@ export const assets = {
 
 export const workData = [
     {
+        title: 'Lynk Digital',
+        description: 'Professional Digital Agency Website',
+        bgImage: '/work-0.png',
+        link: 'https://www.lynkdigital.co.in/'
+    },
+
+    {
         title: 'Columbus Tours',
         description: 'Travel and Tour Website',
         bgImage: '/work-1.png',
@@ -101,12 +108,7 @@ export const workData = [
         bgImage: '/work-3.png',
         link: 'https://www.smartgains.co.in/'
     },
-    {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-        link: 'https://www.zyberweave.com/'
-    },
+    
 ];
 
 export const personalProjectData = [
