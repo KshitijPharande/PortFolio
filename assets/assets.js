@@ -92,7 +92,7 @@ export const workData = [
 
     {
         title: 'Columbus Tours',
-        description: 'Travel and Tour Website',
+        description: 'Travel and Tour Company Website',
         bgImage: '/work-1.png',
         link: 'https://www.columbustours.in/',
     },
@@ -107,6 +107,12 @@ export const workData = [
         description: 'Professional Company Website',
         bgImage: '/work-3.png',
         link: 'https://www.smartgains.co.in/'
+    },
+     {
+        title: 'YCIS Digital Locker',
+        description: 'Digital Locker for College Students to upload Documents',
+        bgImage: '/work-4.png',
+        link: 'https://www.ycislocker.space/'
     },
     
 ];
